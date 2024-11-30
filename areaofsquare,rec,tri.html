@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Formulas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #6a1b9a;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #303f9f;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+        strong {
+            color: #d32f2f;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f3e5f5;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: #512da8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Area Calculator Formulas</h2>
+    <div class="container">
+        <h3><u>Square</u></h3>
+        <p><strong>Formula:</strong> Area = Side × Side</p>
+        <p>To calculate the area of a square, multiply the length of one of its sides by itself.</p>
+        <p><strong>Example:</strong> If the length is 4 units, the area is 4 × 4 = 16 Sq.</p>
+
+        <h3><u>Triangle</u></h3>
+        <p><strong>Formula:</strong> Area = 1/2 × Base × Height</p>
+        <p>To calculate the area of a triangle, multiply the base by the height and then divide by 2.</p>
+        <p><strong>Example:</strong> If the base is 5 units and the height is 8 units, the area is 1/2 × 5 × 8 = 20 Sq.</p>
+
+        <h3><u>Rectangle</u></h3>
+        <p><strong>Formula:</strong> Area = Width × Height</p>
+        <p>To calculate the area of a rectangle, multiply the width by the height.</p>
+        <p><strong>Example:</strong> If the width is 6 units and the height is 7 units, the area is 6 × 7 = 42 Sq.</p>
+
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        // Prompt user for input
+        let a = parseInt(prompt("Enter side length of the square (a):"));
+        let b = parseInt(prompt("Enter the other dimension (b):"));
+
+        // Perform calculations
+        let squareArea = a * a;
+        let rectangleArea = a * b;
+        let triangleArea = (a * b) / 2;
+
+        // Display results interactively
+        document.getElementById("result").innerHTML = `
+            <strong>Calculated Areas:</strong><br>
+            <ul>
+                <li>Area of Square: ${squareArea} Sq units</li>
+                <li>Area of Rectangle: ${rectangleArea} Sq units</li>
+                <li>Area of Triangle: ${triangleArea} Sq units</li>
+            </ul>
+        `;
+    </script>
+</body>
+</html>
